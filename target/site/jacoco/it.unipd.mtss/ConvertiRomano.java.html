@@ -10,27 +10,29 @@ import java.util.TreeMap;
   // Map che associa i numeri arabi ai corrispondenti numeri romani
 <span class="fc" id="L11">  private static final TreeMap&lt;Integer, String&gt; ROMAN_NUMERALS_MAP = new TreeMap&lt;&gt;();</span>
   static {
-<span class="fc" id="L13">    ROMAN_NUMERALS_MAP.put(10, &quot;X&quot;);</span>
-<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(9, &quot;IX&quot;);</span>
-<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
-<span class="fc" id="L16">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
-<span class="fc" id="L17">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
-<span class="fc" id="L18">  }</span>
+
+<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(10, &quot;X&quot;);</span>
+<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(9, &quot;IX&quot;);</span>
+<span class="fc" id="L16">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
+<span class="fc" id="L17">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
+<span class="fc" id="L18">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
+<span class="fc" id="L19">  }</span>
   
   public static String convert(int number){
-<span class="fc bfc" id="L21" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 10) {</span>
-<span class="fc" id="L22">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 10.&quot;);</span>
+
+<span class="fc bfc" id="L23" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 20) {</span>
+<span class="fc" id="L24">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 20.&quot;);</span>
     }
     
-<span class="fc" id="L25">    StringBuilder romanNumber = new StringBuilder();</span>
+<span class="fc" id="L27">    StringBuilder romanNumber = new StringBuilder();</span>
     int floorEntry;
-<span class="fc bfc" id="L27" title="All 2 branches covered.">    while (number &gt; 0) {</span>
-<span class="fc" id="L28">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
-<span class="fc" id="L29">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
-<span class="fc" id="L30">      number -= floorEntry;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">    while (number &gt; 0) {</span>
+<span class="fc" id="L30">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
+<span class="fc" id="L31">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
+<span class="fc" id="L32">      number -= floorEntry;</span>
     }
     
-<span class="fc" id="L33">    return romanNumber.toString();</span>
+<span class="fc" id="L35">    return romanNumber.toString();</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

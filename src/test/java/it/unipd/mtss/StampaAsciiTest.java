@@ -9,9 +9,9 @@ public class StampaAsciiTest {
     //test per caratteri che non dovrebbero comparire
     @Test(expected = IllegalArgumentException.class)
     public void characterNotPresentInRomanFormat() {
-        StampaAscii.printAsciiArt("W");
-        StampaAscii.printAsciiArt("lol");
-        StampaAscii.printAsciiArt("b");
+        StampaAscii.printAsciiArt("gg");
+        StampaAscii.printAsciiArt("cave");
+        StampaAscii.printAsciiArt("fffr");
         StampaAscii.printAsciiArt(null);
     }
 
