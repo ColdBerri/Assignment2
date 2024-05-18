@@ -10,32 +10,34 @@ import java.util.TreeMap;
   // Map che associa i numeri arabi ai corrispondenti numeri romani
 <span class="fc" id="L11">  private static final TreeMap&lt;Integer, String&gt; ROMAN_NUMERALS_MAP = new TreeMap&lt;&gt;();</span>
   static {
-<span class="fc" id="L13">    ROMAN_NUMERALS_MAP.put(100, &quot;C&quot;);</span>
-<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(90, &quot;XC&quot;);</span>
-<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(50, &quot;L&quot;);</span>
-<span class="fc" id="L16">    ROMAN_NUMERALS_MAP.put(40, &quot;XL&quot;);</span>
-<span class="fc" id="L17">    ROMAN_NUMERALS_MAP.put(10, &quot;X&quot;);</span>
-<span class="fc" id="L18">    ROMAN_NUMERALS_MAP.put(9, &quot;IX&quot;);</span>
-<span class="fc" id="L19">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
-<span class="fc" id="L20">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
-<span class="fc" id="L21">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
-<span class="fc" id="L22">  }</span>
+<span class="fc" id="L13">    ROMAN_NUMERALS_MAP.put(500, &quot;D&quot;);</span>
+<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(400, &quot;CD&quot;);</span>
+<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(100, &quot;C&quot;);</span>
+<span class="fc" id="L16">    ROMAN_NUMERALS_MAP.put(90, &quot;XC&quot;);</span>
+<span class="fc" id="L17">    ROMAN_NUMERALS_MAP.put(50, &quot;L&quot;);</span>
+<span class="fc" id="L18">    ROMAN_NUMERALS_MAP.put(40, &quot;XL&quot;);</span>
+<span class="fc" id="L19">    ROMAN_NUMERALS_MAP.put(10, &quot;X&quot;);</span>
+<span class="fc" id="L20">    ROMAN_NUMERALS_MAP.put(9, &quot;IX&quot;);</span>
+<span class="fc" id="L21">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
+<span class="fc" id="L22">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
+<span class="fc" id="L23">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
+<span class="fc" id="L24">  }</span>
   
   public static String convert(int number){
 
-<span class="fc bfc" id="L26" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 100) {</span>
-<span class="fc" id="L27">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 100.&quot;);</span>
+<span class="fc bfc" id="L28" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 500) {</span>
+<span class="fc" id="L29">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 500.&quot;);</span>
     }
     
-<span class="fc" id="L30">    StringBuilder romanNumber = new StringBuilder();</span>
+<span class="fc" id="L32">    StringBuilder romanNumber = new StringBuilder();</span>
     int floorEntry;
-<span class="fc bfc" id="L32" title="All 2 branches covered.">    while (number &gt; 0) {</span>
-<span class="fc" id="L33">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
-<span class="fc" id="L34">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
-<span class="fc" id="L35">      number -= floorEntry;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">    while (number &gt; 0) {</span>
+<span class="fc" id="L35">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
+<span class="fc" id="L36">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
+<span class="fc" id="L37">      number -= floorEntry;</span>
     }
     
-<span class="fc" id="L38">    return romanNumber.toString();</span>
+<span class="fc" id="L40">    return romanNumber.toString();</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

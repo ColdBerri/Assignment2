@@ -10,6 +10,8 @@ public class ConvertiRomano {
   // Map che associa i numeri arabi ai corrispondenti numeri romani
   private static final TreeMap<Integer, String> ROMAN_NUMERALS_MAP = new TreeMap<>();
   static {
+    ROMAN_NUMERALS_MAP.put(500, "D");
+    ROMAN_NUMERALS_MAP.put(400, "CD");
     ROMAN_NUMERALS_MAP.put(100, "C");
     ROMAN_NUMERALS_MAP.put(90, "XC");
     ROMAN_NUMERALS_MAP.put(50, "L");
@@ -23,8 +25,8 @@ public class ConvertiRomano {
   
   public static String convert(int number){
 
-    if (number < 1 || number > 100) {
-      throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 100.");
+    if (number < 1 || number > 500) {
+      throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 500.");
     }
     
     StringBuilder romanNumber = new StringBuilder();

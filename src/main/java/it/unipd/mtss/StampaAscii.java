@@ -42,6 +42,7 @@ public class StampaAscii {
             result.append("*    *\n");
             result.append(" \n");
           break;
+
           case 'L':
             result.append("*       \n");
             result.append("*       \n");
@@ -50,6 +51,7 @@ public class StampaAscii {
             result.append("* * * * \n");
             result.append(" \n");
           break;
+
           case 'C':
           result.append("* * * *\n");
           result.append("*      \n");
@@ -58,6 +60,16 @@ public class StampaAscii {
           result.append("* * * *\n");
           result.append(" \n");
           break;
+          
+        case 'D':
+          result.append("* * *   \n");
+          result.append("*     * \n");
+          result.append("*      *\n");
+          result.append("*     * \n");
+          result.append("* * *   \n");
+          result.append(" \n");
+          break;
+
           default:
             throw new IllegalArgumentException("Invalid Roman numeral: " + c);
         }
