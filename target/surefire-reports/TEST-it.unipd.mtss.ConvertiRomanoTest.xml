@@ -68,6 +68,6 @@
   <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="First50NumbersConversion" time="0"/>
   <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="First100NumbersConversion" time="0"/>
   <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="First3NumbersConversion" time="0"/>
-  <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="LongestRomanNumberTill1000" time="0.001"/>
-  <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="overRangeThrowsIllegalArgumentException" time="0"/>
+  <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="LongestRomanNumberTill1000" time="0"/>
+  <testcase classname="it.unipd.mtss.ConvertiRomanoTest" name="overRangeThrowsIllegalArgumentException" time="0.001"/>
 </testsuite>
