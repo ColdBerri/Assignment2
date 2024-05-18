@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="it.unipd.mtss.StampaAsciiTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="it.unipd.mtss.StampaAsciiTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="22.0.1+8"/>
@@ -57,14 +57,14 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Temurin-22.0.1+8"/>
   </properties>
-  <testcase classname="it.unipd.mtss.StampaAsciiTest" name="performance" time="0.006"/>
+  <testcase classname="it.unipd.mtss.StampaAsciiTest" name="performance" time="0.011"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestMultiChars" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestC" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestD" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestI" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestL" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestM" time="0"/>
-  <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestV" time="0.003"/>
+  <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestV" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="TestX" time="0"/>
   <testcase classname="it.unipd.mtss.StampaAsciiTest" name="characterNotPresentInRomanFormat" time="0"/>
 </testsuite>
