@@ -9,9 +9,9 @@ public class StampaAsciiTest {
     //test per caratteri che non dovrebbero comparire
     @Test(expected = IllegalArgumentException.class)
     public void characterNotPresentInRomanFormat() {
-        StampaAscii.printAsciiArt("W");
-        StampaAscii.printAsciiArt("lol");
-        StampaAscii.printAsciiArt("b");
+        StampaAscii.printAsciiArt("gg");
+        StampaAscii.printAsciiArt("cane");
+        StampaAscii.printAsciiArt("fffr");
         StampaAscii.printAsciiArt(null);
     }
 
@@ -93,4 +93,72 @@ public class StampaAsciiTest {
             String stringa= result.toString(); 
                 assertEquals(StampaAscii.printAsciiArt("D"), stringa);
         }
+
+        @Test
+        public void TestM() {
+            StringBuilder result = new StringBuilder();
+                result.append("*       *\n");
+                result.append("* *   * *\n");
+                result.append("*  * *  *\n");
+                result.append("*   *   *\n");
+                result.append("*       *\n");
+                result.append(" \n");
+            String stringa= result.toString(); 
+                assertEquals(StampaAscii.printAsciiArt("M"), stringa);
+        }
+
+        @Test
+        public void TestMultiChars() {
+            StringBuilder result = new StringBuilder();
+                result.append("*       *\n");
+                result.append("* *   * *\n");
+                result.append("*  * *  *\n");
+                result.append("*   *   *\n");
+                result.append("*       *\n");
+                result.append(" \n");
+                result.append("* * *   \n");
+                result.append("*     * \n");
+                result.append("*      *\n");
+                result.append("*     * \n");
+                result.append("* * *   \n");
+                result.append(" \n");
+                result.append("* * * *\n");
+                result.append("*      \n");
+                result.append("*      \n");
+                result.append("*      \n");
+                result.append("* * * *\n");
+                result.append(" \n");
+                result.append("*       \n");
+                result.append("*       \n");
+                result.append("*       \n");
+                result.append("*       \n");
+                result.append("* * * * \n");
+                result.append(" \n");
+                result.append("*    * \n");
+                result.append(" *  * \n");
+                result.append("  *   \n");
+                result.append(" *  * \n");
+                result.append("*    *\n");
+                result.append(" \n");
+                result.append("*        *\n");
+                result.append(" *      * \n");
+                result.append("  *    *  \n");
+                result.append("   *  *   \n");
+                result.append("     *    \n");
+                result.append(" \n");
+                result.append("***\n");
+                result.append(" * \n");
+                result.append(" * \n");
+                result.append(" * \n");
+                result.append("***\n");
+                result.append("\n");
+
+            String stringa= result.toString(); 
+                assertEquals(StampaAscii.printAsciiArt("MDCLXVI"), stringa);
+        }
+
+        @Test(timeout = 100) 
+        public void performance() {
+          StampaAscii.printAsciiArt("MDCLXVI");
+     }
 }
