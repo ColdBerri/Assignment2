@@ -42,6 +42,14 @@ public class StampaAscii {
             result.append("*    *\n");
             result.append(" \n");
           break;
+          case 'L':
+            result.append("*       \n");
+            result.append("*       \n");
+            result.append("*       \n");
+            result.append("*       \n");
+            result.append("* * * * \n");
+            result.append(" \n");
+          break;
 
           default:
             throw new IllegalArgumentException("Invalid Roman numeral: " + c);

@@ -9,10 +9,10 @@ public class StampaAsciiTest {
     //test per caratteri che non dovrebbero comparire
     @Test(expected = IllegalArgumentException.class)
     public void characterNotPresentInRomanFormat() {
-        StampaAscii.printAsciiArt("gg");
-        StampaAscii.printAsciiArt("cave");
-        StampaAscii.printAsciiArt("fffr");
-        StampaAscii.printAsciiArt(null);
+    	StampaAscii.printAsciiArt("W");
+    	StampaAscii.printAsciiArt("lol");
+    	StampaAscii.printAsciiArt("b");
+    	StampaAscii.printAsciiArt(null);
     }
 
     //test lettera I
@@ -53,5 +53,18 @@ public class StampaAsciiTest {
             result.append(" \n");
         String stringa= result.toString(); 
             assertEquals(StampaAscii.printAsciiArt("X"), stringa);
+    }
+
+    @Test
+    public void TestL() {
+        StringBuilder result = new StringBuilder();
+            result.append("*       \n");
+            result.append("*       \n");
+            result.append("*       \n");
+            result.append("*       \n");
+            result.append("* * * * \n");
+            result.append(" \n");
+        String stringa= result.toString(); 
+            assertEquals(StampaAscii.printAsciiArt("L"), stringa);
     }
 }
