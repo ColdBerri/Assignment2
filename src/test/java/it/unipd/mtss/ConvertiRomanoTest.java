@@ -8,15 +8,15 @@ public class ConvertiRomanoTest {
     //test dei numeri fuori dal range, oltre mille, zero o sotto 1
     @Test(expected = IllegalArgumentException.class)
         public void overRangeThrowsIllegalArgumentException() {
-    		ConvertiRomano.convert(1111);
+      ConvertiRomano.convert(1111);
         }
     @Test(expected = IllegalArgumentException.class)
         public void underRangeThrowsIllegalArgumentException() {
-    		ConvertiRomano.convert(0);
+      ConvertiRomano.convert(0);
         }
     @Test(expected = IllegalArgumentException.class)
         public void underZeroThrowsIllegalArgumentException() {
-    		ConvertiRomano.convert(-1);
+      ConvertiRomano.convert(-1);
         }
 
     //test primi 3 numeri
@@ -75,12 +75,28 @@ public class ConvertiRomanoTest {
         assertEquals(ConvertiRomano.convert(489), "CDLXXXIX");
     }
 
-    //numeri con una sola lettera fino a 10
+    //numeri con una sola lettera fino a 500
     @Test
     public void OneLetterNumbers() {
         assertEquals(ConvertiRomano.convert(10), "X");
         assertEquals(ConvertiRomano.convert(50), "L");
         assertEquals(ConvertiRomano.convert(100), "C");
         assertEquals(ConvertiRomano.convert(500), "D");
+        assertEquals(ConvertiRomano.convert(1000), "M");
     }
+
+    @Test
+    public void MediumNumberConversion() {
+    assertEquals(ConvertiRomano.convert(40), "XL");
+    assertEquals(ConvertiRomano.convert(90), "XC");
+    assertEquals(ConvertiRomano.convert(400), "CD");
+    assertEquals(ConvertiRomano.convert(900), "CM");
+}
+
+    //numero romano più lungo nell'intervallo 1-1000
+    @Test
+    public void LongestRomanNumberTill1000() {
+    assertEquals(ConvertiRomano.convert(888), "DCCCLXXXVIII");
+    }
+    
 }
