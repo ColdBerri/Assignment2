@@ -26,4 +26,12 @@ public class ConvertiRomanoTest {
         assertEquals(ConvertiRomano.convert(2), "II");
         assertEquals(ConvertiRomano.convert(3), "III");
     }
+
+    //primi 6 numeri continuo
+    @Test
+    public void First6NumbersConversion() {
+        assertEquals(ConvertiRomano.convert(4), "IV");
+        assertEquals(ConvertiRomano.convert(5), "V");
+        assertEquals(ConvertiRomano.convert(6), "VI");
+    }
 }

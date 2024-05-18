@@ -28,4 +28,17 @@ public class StampaAsciiTest {
         String stringa= result.toString(); 
             assertEquals(StampaAscii.printAsciiArt("I"), stringa);
     }
+
+    @Test
+    public void TestV() {
+        StringBuilder result = new StringBuilder();
+            result.append("*        *\n");
+            result.append(" *      * \n");
+            result.append("  *    *  \n");
+            result.append("   *  *   \n");
+            result.append("     *    \n");
+            result.append(" \n");
+        String stringa= result.toString(); 
+            assertEquals(StampaAscii.printAsciiArt("V"), stringa);
+    }
 }

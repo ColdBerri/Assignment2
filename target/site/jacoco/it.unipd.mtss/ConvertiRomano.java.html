@@ -10,23 +10,25 @@ import java.util.TreeMap;
   // Map che associa i numeri arabi ai corrispondenti numeri romani
 <span class="fc" id="L11">  private static final TreeMap&lt;Integer, String&gt; ROMAN_NUMERALS_MAP = new TreeMap&lt;&gt;();</span>
   static {
-<span class="fc" id="L13">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
-<span class="fc" id="L14">  }</span>
+<span class="fc" id="L13">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
+<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
+<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
+<span class="fc" id="L16">  }</span>
   
   public static String convert(int number){
-<span class="fc bfc" id="L17" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 3) {</span>
-<span class="fc" id="L18">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 3.&quot;);</span>
+<span class="fc bfc" id="L19" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 6) {</span>
+<span class="fc" id="L20">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 3.&quot;);</span>
     }
     
-<span class="fc" id="L21">    StringBuilder romanNumber = new StringBuilder();</span>
+<span class="fc" id="L23">    StringBuilder romanNumber = new StringBuilder();</span>
     int floorEntry;
-<span class="fc bfc" id="L23" title="All 2 branches covered.">    while (number &gt; 0) {</span>
-<span class="fc" id="L24">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
-<span class="fc" id="L25">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
-<span class="fc" id="L26">      number -= floorEntry;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">    while (number &gt; 0) {</span>
+<span class="fc" id="L26">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
+<span class="fc" id="L27">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
+<span class="fc" id="L28">      number -= floorEntry;</span>
     }
     
-<span class="fc" id="L29">    return romanNumber.toString();</span>
+<span class="fc" id="L31">    return romanNumber.toString();</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
