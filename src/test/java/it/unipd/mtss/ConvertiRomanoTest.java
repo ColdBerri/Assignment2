@@ -8,15 +8,15 @@ public class ConvertiRomanoTest {
     //test dei numeri fuori dal range, oltre mille, zero o sotto 1
     @Test(expected = IllegalArgumentException.class)
         public void overRangeThrowsIllegalArgumentException() {
-    		ConvertiRomano.convert(1111);
+            ConvertiRomano.convert(1111);
         }
     @Test(expected = IllegalArgumentException.class)
         public void underRangeThrowsIllegalArgumentException() {
-    		ConvertiRomano.convert(0);
+            ConvertiRomano.convert(0);
         }
     @Test(expected = IllegalArgumentException.class)
         public void underZeroThrowsIllegalArgumentException() {
-    		ConvertiRomano.convert(-1);
+            ConvertiRomano.convert(-1);
         }
 
     //test primi 3 numeri
@@ -59,10 +59,19 @@ public class ConvertiRomanoTest {
         assertEquals(ConvertiRomano.convert(43), "XLIII");
     }
 
-    //numeri con una sola lettera fino a 10
+    //Tests fino a 50
+    @Test
+    public void First100NumbersConversion() {
+        assertEquals(ConvertiRomano.convert(66), "LXVI");
+        assertEquals(ConvertiRomano.convert(80), "LXXX");
+        assertEquals(ConvertiRomano.convert(99), "XCIX");
+    }
+
+    //numeri con una sola lettera fino a 100
     @Test
     public void OneLetterNumbers() {
         assertEquals(ConvertiRomano.convert(10), "X");
         assertEquals(ConvertiRomano.convert(50), "L");
+        assertEquals(ConvertiRomano.convert(100), "C");
     }
 }
